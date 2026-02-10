@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shree Shyaam Tour and Travel</title>
+
+<style>
+body{
+margin:0;
+font-family: 'Segoe UI', sans-serif;
+background:#f2f2f2;
+color:#333;
+}
+
+/* HEADER */
+header{
+background:linear-gradient(135deg,#000,#222);
+color:white;
+padding:30px 15px;
+text-align:center;
+}
+
+.logo{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:15px;
+}
+
+.logo-icon{
+width:60px;
+height:60px;
+background:gold;
+color:black;
+font-size:28px;
+font-weight:bold;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+nav{
+margin-top:15px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 12px;
+font-weight:600;
+}
+
+/* SECTIONS */
+section{
+background:white;
+margin:25px auto;
+padding:30px;
+max-width:1000px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+h2{
+color:#b8860b;
+text-align:center;
+margin-bottom:25px;
+}
+
+/* CARS */
+.cars{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
+
+.car{
+background:#111;
+color:white;
+padding:25px;
+border-radius:10px;
+text-align:center;
+font-size:18px;
+transition:transform 0.3s;
+}
+
+.car:hover{
+transform:translateY(-5px);
+}
+
+/* FORM */
+input,textarea{
+width:100%;
+padding:12px;
+margin:10px 0;
+border-radius:6px;
+border:1px solid #ccc;
+}
+
+button{
+background:#b8860b;
+color:white;
+border:none;
+padding:12px 25px;
+font-size:16px;
+border-radius:6px;
+cursor:pointer;
+}
+
+button:hover{
+background:#a07400;
+}
+
+/* WHATSAPP */
+.btn{
+display:inline-block;
+background:#25D366;
+color:white;
+padding:12px 20px;
+border-radius:6px;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* FOOTER */
+footer{
+background:#000;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:30px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">
+<div class="logo-icon">SS</div>
+<div>
+<h1>Shree Shyaam Tour and Travel</h1>
+<p>Premium Car Booking for All Events</p>
+</div>
+</div>
+<nav>
+<a href="#cars">Our Cars</a>
+<a href="#booking">Book Now</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section id="cars">
+<h2>Our Luxury & Event Cars</h2>
+<div class="cars">
+<div class="car">Eeco</div>
+<div class="car">Scorpio</div>
+<div class="car">BMW</div>
+<div class="car">Verna</div>
+<div class="car">Cruiser</div>
+<div class="car">Audi</div>
+</div>
+</section>
+
+<section id="booking">
+<h2>Book Your Car</h2>
+<form onsubmit="sendWhatsApp(); return false;">
+<input id="name" placeholder="Your Name" required>
+<input id="phone" placeholder="Phone Number" required>
+<input type="date" id="date" required>
+<textarea id="details" placeholder="Pickup & Drop Location"></textarea>
+<button type="submit">Book via WhatsApp</button>
+</form>
+</section>
+
+<section id="contact">
+<h2>Contact Us</h2>
+<p style="text-align:center;font-size:18px;">📞 9896827810</p>
+<div style="text-align:center;">
+<a class="btn" href="https://wa.me/919896827810" target="_blank">Chat on WhatsApp</a>
+</div>
+</section>
+
+<footer>
+<p>© 2026 Shree Shyaam Tour and Travel</p>
+</footer>
+
+<script>
+function sendWhatsApp(){
+let msg =
+"Car Booking Request%0A"+
+"Name: "+name.value+"%0A"+
+"Phone: "+phone.value+"%0A"+
+"Date: "+date.value+"%0A"+
+"Details: "+details.value;
+window.open("https://wa.me/919896827810?text="+msg,"_blank");
+}
+</script>
+
+</body>
+</html>
